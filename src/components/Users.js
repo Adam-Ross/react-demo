@@ -1,12 +1,15 @@
-import React from 'react'
 import UserItem from './UserItem'
-const Users = ({users, handleSetUser}) => {
-    return users.map((user) => (
-        <UserItem user={user}
-         key={user.id}
-         handleSetUser={handleSetUser}
-        />
+
+const Users = ({users, changeSingleUserState}) => {
+    
+    return users.map((current) => (
+        <UserItem user={current}
+         key={current.id}
+         changeSingleUserState={changeSingleUserState}
+         />
     ))
 }
 
 export default Users
+
+

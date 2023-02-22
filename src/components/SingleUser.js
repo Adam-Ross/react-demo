@@ -1,13 +1,13 @@
-const SingleUser = ({singleUser, handleSingleUserStateChange}) => {
+const SingleUser = ({singleUser, setSingleUserToNull}) => {
 
-    const handleChange = () => {
-        handleSingleUserStateChange()
+    const handleClick = () => {
+        setSingleUserToNull()
     }
 
     return (
         <>
             <h1>{singleUser.name}</h1>
-            <button onClick={handleChange}>Back</button>
+            <button onClick={handleClick}>Back</button>
         </>
     )
 }
